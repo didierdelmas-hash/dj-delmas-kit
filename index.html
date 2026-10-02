@@ -54,6 +54,15 @@ button.btn.copiado{background:#1e7f4f;border-color:#1e7f4f;color:#fff}
   </div>
 
   <div class="card">
+    <h2><span class="num">PROMPT 03</span> · EL ANÁLISIS FACIAL Y DE LA SONRISA</h2>
+    <p>Tus fotos del protocolo convertidas en un informe estético: tercios, línea bipupilar, líneas medias, línea de sonrisa, corredores y perfil.</p>
+    <div class="row">
+      <a class="btn" href="pdfs/PROMPT-03_Analisis-Facial-y-Sonrisa.pdf" download>Descargar PDF</a>
+      <button class="btn" data-copy="p3">Copiar prompt</button>
+    </div>
+  </div>
+
+  <div class="card">
     <h2><span class="num">LOS MANUALES</span> · FOTOGRAFÍA DENTAL</h2>
     <p>Los tres manuales que habéis visto en la sesión, completos, con los planos de luces y los ajustes de cámara de cada foto.</p>
     <div class="row" style="flex-direction:column">
@@ -70,6 +79,51 @@ button.btn.copiado{background:#1e7f4f;border-color:#1e7f4f;color:#fff}
 </div>
 <script>
 const P = {
+p3:`Actúa como un odontólogo especialista en estética dental y análisis facial (protocolo de Digital Smile Design). Te voy a subir varias fotografías de un mismo paciente. Analízalas y redacta un informe de análisis facial y de la sonrisa en español.
+
+FOTOS QUE PUEDO SUBIRTE (identifica tú cuál es cada una; si falta alguna, dímelo al final):
+1) Frontal en reposo  2) Frontal con sonrisa natural  3) Frontal con sonrisa amplia («E»)  4) 3/4 con sonrisa  5) Perfil en reposo  6) Perfil con sonrisa  7) Vista «12 en punto»  8) Primer plano de la sonrisa  9) Intraoral frontal retraída.
+
+ANTES DE EMPEZAR, CONTROL DE CALIDAD: comprueba en cada foto si la cabeza está en posición natural (plano de Frankfort horizontal, mirada al frente), si la cámara está a la altura de la boca y si hay distorsión por objetivo angular o por disparar demasiado cerca (efecto barril). Si una foto no sirve para medir algo, dilo y no saques conclusiones de ella.
+
+REGLA DE MEDIDA: una foto 2D no tiene escala real. Da proporciones y ángulos aproximados. Solo da milímetros si hay una referencia visible (regla, o asumiendo una anchura de incisivo central de 8,5 mm, y dilo explícitamente). Marca cada valor como «estimado».
+
+A. ANÁLISIS FACIAL FRONTAL (fotos 1 y 2)
+- Tercios faciales (triquion–glabela, glabela–subnasal, subnasal–mentón): proporción entre ellos; lo esperado es aproximadamente 1:1:1. En el tercio inferior: subnasal–stomion debería ser ~1/3 y stomion–mentón ~2/3.
+- Quintos faciales: anchura de cada ojo ≈ 1/5 de la cara; distancia intercantal ≈ anchura del ala nasal.
+- Línea bipupilar como referencia horizontal: ¿está nivelada? Compara con ella la línea comisural y el plano incisal. Un plano incisal inclinado (cant) de más de unos 2–3° respecto a la bipupilar es perceptible.
+- Línea media facial (glabela, punta nasal, filtrum, mentón): ¿hay desviación o asimetría del mentón o de la nariz?
+- Línea media dental superior respecto a la facial: indica si coincide, hacia qué lado se desvía y si está inclinada. Las desviaciones de hasta ~2 mm suelen pasar desapercibidas; la inclinación se percibe antes que el desplazamiento.
+- Simetría general de la cara.
+
+B. ANÁLISIS DENTOLABIAL (fotos 1, 2, 3 y 8)
+- Exposición del incisivo central en reposo (lo habitual es 1–4 mm, más en jóvenes y mujeres, menos con la edad).
+- Línea de sonrisa: baja (se ve menos del 75 % de la corona), media (75–100 % de la corona y papilas) o alta (se ve encía; más de 3 mm de encía = sonrisa gingival).
+- Arco de la sonrisa: ¿los bordes incisales siguen la curva del labio inferior (consonante), son planos o invertidos?
+- Corredores bucales: normales (aprox. 10–15 % de la anchura de la sonrisa), amplios o ausentes.
+- Número de dientes visibles en la sonrisa (6, 8, 10…).
+- Proporción de los incisivos centrales (ancho/largo; lo estético está entre 75 y 80 %) y relación de anchuras central–lateral–canino vistas de frente.
+- Línea gingival y zénits: centrales y caninos a la misma altura, laterales ligeramente más incisales; simetría derecha/izquierda.
+- Troneras incisales (deberían abrirse progresivamente de central a canino), color, textura y posibles malposiciones visibles.
+
+C. PERFIL (fotos 5 y 6)
+- Tipo de perfil según el ángulo glabela–subnasal–pogonion: recto (~165–175°), convexo o cóncavo.
+- Ángulo nasolabial (referencia 90–110°; algo más abierto en mujeres).
+- Posición de los labios respecto a la línea E de Ricketts (punta nasal–pogonion): labio superior ~4 mm y labio inferior ~2 mm por detrás en adultos.
+- Surco mentolabial y soporte del labio superior; inclinación del incisivo superior en perfil con sonrisa.
+
+D. VISTA 12 EN PUNTO (foto 7, si está)
+- Curvatura del borde incisal, posición vestíbulo-palatina de los incisivos y asimetrías del arco.
+
+FORMATO DEL INFORME
+1. Resumen en 3 líneas, en lenguaje que entienda el paciente.
+2. Tabla con columnas: Parámetro | Valor estimado | Referencia | Valoración (OK dentro de norma / LÍMITE / FUERA de norma) | Foto usada.
+3. Hallazgos principales ordenados por impacto estético.
+4. Consideraciones para el plan de tratamiento (qué habría que confirmar clínicamente o con otras pruebas; no des un diagnóstico).
+5. Fotos que faltan o que habría que repetir, y por qué.
+6. Si puedes ejecutar código o editar imágenes: dibuja sobre la foto frontal con sonrisa la línea bipupilar, la línea media facial, la línea media dental, la línea comisural y los tercios faciales, y devuélveme esa imagen anotada.
+
+Termina siempre con esta nota: «Análisis orientativo generado por IA a partir de fotografías 2D. No sustituye la exploración clínica ni el diagnóstico del profesional.»`,
 p1:`Te paso una fotografía intraoral real. Genera una segunda imagen EXACTAMENTE igual —mismo encuadre, misma iluminación, mismos labios y retractores, misma encía, mismos reflejos y mismo fondo— donde lo ÚNICO que cambie sea el resultado de un tratamiento dental ideal: dientes restaurados, alineados y sanos, proporciones naturales, color A1–A2 realista (nada de blanco nuclear), textura de esmalte con microdetalle y translucidez en el borde incisal, y encía rosada sana. No cambies nada más. Debe parecer una fotografía clínica real tomada un segundo después, no un render.
 
 (Después, en el mismo chat:)
