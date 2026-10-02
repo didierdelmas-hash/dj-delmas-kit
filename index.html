@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EL KIT · DJ DELMAS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--negro:#0a0a0c;--caja:#141418;--ambar:#f0c27a;--blanco:#f5f5f5;--gris:#9b9ba0;--rojo:#e03131}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--negro);color:var(--blanco);font-family:'Space Grotesk',sans-serif;min-height:100vh;padding:28px 16px 60px}
+.wrap{max-width:640px;margin:0 auto}
+.kicker{color:var(--ambar);letter-spacing:.35em;font-size:12px;font-weight:500;text-transform:uppercase}
+h1{font-weight:300;font-size:clamp(34px,9vw,54px);letter-spacing:.08em;margin:10px 0 4px}
+.lema{color:var(--gris);font-size:14px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:34px}
+.card{background:var(--caja);border:1px solid #26262c;border-radius:14px;padding:22px 20px;margin-bottom:18px}
+.card h2{font-size:17px;font-weight:700;letter-spacing:.04em;margin-bottom:4px}
+.card .num{color:var(--ambar);font-weight:700}
+.card p{color:var(--gris);font-size:14px;line-height:1.5;margin-bottom:14px}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+a.btn,button.btn{flex:1;min-width:150px;display:inline-block;text-align:center;padding:13px 14px;border-radius:9px;font-family:inherit;font-size:14px;font-weight:700;letter-spacing:.05em;cursor:pointer;text-decoration:none;border:none}
+a.btn{background:var(--ambar);color:#111}
+button.btn{background:transparent;color:var(--ambar);border:1.5px solid var(--ambar)}
+button.btn.copiado{background:#1e7f4f;border-color:#1e7f4f;color:#fff}
+.soon{opacity:.55}
+.soon .tag{display:inline-block;font-size:11px;letter-spacing:.2em;color:var(--negro);background:var(--gris);border-radius:4px;padding:3px 8px;margin-bottom:8px;text-transform:uppercase}
+.footer{margin-top:38px;color:var(--gris);font-size:12.5px;line-height:1.6}
+.footer b{color:var(--ambar)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">DJ Delmas · Ver para creer</div>
+  <h1>EL KIT</h1>
+  <div class="lema">Una sesión es una sesión · Ibiza 2026</div>
+
+  <div class="card">
+    <h2><span class="num">PROMPT 01</span> · EL ANTES / DESPUÉS</h2>
+    <p>De una boca deteriorada a un resultado ideal, y la animación de la transición. Para ChatGPT con tu foto intraoral.</p>
+    <div class="row">
+      <a class="btn" href="pdfs/PROMPT-01_Antes-y-Despues.pdf" download>Descargar PDF</a>
+      <button class="btn" data-copy="p1">Copiar prompt</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">PROMPT 02</span> · LA TRANSICIÓN DE CASO</h2>
+    <p>Tus fotos seriadas del mismo caso, tomadas desde el mismo encuadre, convertidas en una película con morph fluido.</p>
+    <div class="row">
+      <a class="btn" href="pdfs/PROMPT-02_Transicion-de-Caso.pdf" download>Descargar PDF</a>
+      <button class="btn" data-copy="p2">Copiar prompt</button>
+    </div>
+  </div>
+
+  <div class="card soon">
+    <span class="tag">Próximamente</span>
+    <h2>LA CHULETA DE SETTINGS · EL PROTOCOLO DE 1ª VISITA</h2>
+    <p>Los mismos ajustes y el mismo protocolo que habéis visto en la sesión. Se suben aquí esta semana — guarda esta página.</p>
+  </div>
+
+  <div class="footer">
+    <b>Regla de la casa:</b> todo lo sintético, etiquetado. Esto es comunicación, no diagnóstico ni promesa de resultado. El consentimiento del paciente es específico por uso.<br><br>
+    Dr. Didier Delmas · Delmas Clinic · Instagram <b>@drdelmas</b>
+  </div>
+</div>
+<script>
+const P = {
+p1:`Te paso una fotografía intraoral real. Genera una segunda imagen EXACTAMENTE igual —mismo encuadre, misma iluminación, mismos labios y retractores, misma encía, mismos reflejos y mismo fondo— donde lo ÚNICO que cambie sea el resultado de un tratamiento dental ideal: dientes restaurados, alineados y sanos, proporciones naturales, color A1–A2 realista (nada de blanco nuclear), textura de esmalte con microdetalle y translucidez en el borde incisal, y encía rosada sana. No cambies nada más. Debe parecer una fotografía clínica real tomada un segundo después, no un render.
+
+(Después, en el mismo chat:)
+Crea ahora un vídeo de 5 segundos con una transición fluida tipo morph entre la foto original y la imagen que acabas de generar: cámara totalmente estática, sin zoom ni movimiento de encuadre, fundido progresivo y uniforme de una a otra. Empieza 1 segundo quieto en el ANTES y termina 1,5 segundos quieto en el DESPUÉS.`,
+p2:`Te paso varias fotografías clínicas del mismo caso dental, tomadas en visitas distintas desde el mismo encuadre. Crea un vídeo con una transición fluida tipo morph entre ellas, en el orden exacto en que te las he subido. Reglas: cámara totalmente estática; alinea las imágenes entre sí para que dientes y labios no «salten» entre fotos; 1 segundo quieto en cada foto y 1,5 segundos de fundido entre cada par; ritmo constante; sin zooms, sin efectos, sin música, sin texto. El resultado debe parecer la misma boca evolucionando en el tiempo delante de una cámara fija.`};
+document.querySelectorAll("button[data-copy]").forEach(b=>{
+  b.addEventListener("click",async()=>{
+    try{await navigator.clipboard.writeText(P[b.dataset.copy]);}catch(e){
+      const t=document.createElement("textarea");t.value=P[b.dataset.copy];document.body.appendChild(t);t.select();document.execCommand("copy");t.remove();}
+    const old=b.textContent;b.textContent="¡Copiado!";b.classList.add("copiado");
+    setTimeout(()=>{b.textContent=old;b.classList.remove("copiado")},1800);
+  });
+});
+</script>
+</body>
+</html>
